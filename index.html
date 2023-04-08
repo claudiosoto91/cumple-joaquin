@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/jpg" href="img/feliz.png"/>
+    <link rel="stylesheet" href="estilos.css">
+    <title>Cumple | Joaquín</title>
+</head>
+<body>
+
+    <header class="header">
+        <nav>
+            <a href="#seccion-1" ></a>
+            <a href="#seccion-2" ></a>
+            <a href="#seccion-3" ></a>
+        </nav>
+    </header>
+
+    <article class="article">
+        <section id="seccion-1">
+            <div class="dibujo">
+                <img src="/img/feliz.png" alt="imagen dibujo">
+            </div>
+            <div class="img-joaquin">
+                <img src="/img/joa.png" alt="imagen joa cumple">
+            </div>
+            <div class="contenedor">
+                <div class="central">
+                    <h1>Voy a celebrar mi cumpleaños</h1>
+                    <h2>¡Joaquín!</h2>
+                    <div id="micontador" data-final="2023/05/28">
+                        <div class="num">
+                            <div class="dig"><span>&nbsp;</span></div>
+                            <div class="label">Días</div>
+                        </div>
+                        <div class="num">
+                            <div class="dig"><span>&nbsp;</span></div>
+                            <div class="label">Horas</div>
+                        </div> 
+                        <div class="num">
+                            <div class="dig"><span>&nbsp;</span></div>
+                            <div class="label">Min</div>
+                        </div>
+                        <div class="num">
+                            <div class="dig"><span>&nbsp;</span></div>
+                            <div class="label">Seg</div>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </section>
+        <section id="seccion-2">
+            <div class="contenedor lugar">
+                <h2>¿Dónde y Cuándo?</h2>
+                <div class="datos-lugar">
+                    <h3>Te espero en:</h3>
+                    <img src="" alt="">
+                    <p>Fecha: 28 de Mayo de 2023</p>
+                    <p>Hora: 17 horas</p>
+                    <p>Lugar: direccion 1111 - Pilcaniyeu</p>
+                </div>
+                <div class="dibujo-1">
+                    <img src="/img/sp-2.png" alt="imagen dibujo">
+                </div>
+            </div>
+        </section>
+        <section id="seccion-3">
+            <div class="cartel">
+                <img src="/img/sp-1.png" alt="cartel dibujo">
+            </div>
+            <div class="asistencia" >
+                <h2>Confirmar Asistencia</h2>
+                <p>Espero que puedas venir a compartir conmigo este día tan importante para mí</p>
+                <p>¡Gracias!</p>
+                <form id="formulario"  name="asistencia">
+                    <div class="campo">
+                        <label for="nombre">Nombre: </label>
+                        <input type="text" name="nombre" id="nombre" placeholder="Tu nombre aquí:">
+                    </div>
+                    <div class="campo">
+                        <label for="apellido">Apellido: </label>
+                        <input type="text" name="apellido" id="apellido" placeholder="Tu Apellido aquí:">
+                    </div>
+                    <div class="campo">
+                        <p>¿Estarás presente?</p>
+                        <input type="radio" name="asistencia" value="si" id="si"> <label for="asistencia">SI</label> 
+
+                        <input type="radio" name="asistencia" value="no" id="no"> <label for="asistencia">NO</label> 
+                    </div>
+                    <button class="btn-enviar" type="submit">Enviar</button>
+                </form>
+            </div>
+        </section>
+        <footer class="footer contenedor">
+            <div class="frases">
+                <p>Mi familia y yo te esperamos.</p>
+                <p>¡ Joaquín !</p>
+            </div>
+            <div class="img-footer">
+                <img src="/img/sp-3.png" alt="imagen footer">
+            </div>
+        </footer>
+
+    </article>
+
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbw5XicAu0LABaNQsAgIh2rXEshFcYMGnwAK69Jo594h2UZcS1JI0Vt6PcKlXc8wHeA7/exec'
+        const form = document.forms['asistencia']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                form.reset(),  
+                alert('Gracias por confirmar!!');
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+
+    <script src="js.js"></script>
+</body>
+</html>
