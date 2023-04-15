@@ -10,20 +10,24 @@ html{
     font-family: 'Poppins', sans-serif;
 }
 
+.blanco{
+    color: white;
+}
+
 /* Boton play audio */
 #btn-play{
     position: absolute;
-    top: 50%;
-    left: 0;
+    top: 30%;
+    right: 0;
     z-index: 2;
-    margin-left: .5rem;
+    margin-right: .5rem;
     cursor: pointer;
 }
 .img-play{
     background: rgb(231, 231, 231);
     border-radius: .5rem;
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
     padding: .3rem;
 }
 .img-play img{
@@ -36,9 +40,9 @@ html{
 
 #micontador{
     margin-top: 30px;
-   display: flex;
-   justify-content: center;
-   align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #micontador .num{
    display: flex;
@@ -159,7 +163,7 @@ html{
     bottom: 20px;
 }
 .article #seccion-2 h2{
-    color: #023047;
+    color: white;
     font-weight: 900;
 }
 .datos-lugar{
@@ -286,6 +290,9 @@ html{
     }
     #micontador .num .dig span, #micontador .label{
         font-size: 22px;
+    }
+    .central{
+        top: -100px;
     }
     .img-joaquin{
         width: 200px;
