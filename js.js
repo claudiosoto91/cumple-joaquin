@@ -67,3 +67,25 @@ function mostrarTiempo(partes, bloque){
     }
     return milisec;
   }
+
+  //Controlar la musica
+   const play = document.getElementById('btn-play');
+   const audio = document.createElement("audio");
+   audio.preload = "auto";
+   audio.loop = true;
+   audio.volume = 0.8;
+   audio.currentTime = 15; 
+   audio.src = "/audio.mp3";
+   audio.play();
+
+   play.addEventListener('click', () => {
+      if ( !audio.paused ){
+         audio.pause();
+      }else{
+         audio.play();
+      }
+   });
+
+  play.appendChild(audio);
+
+

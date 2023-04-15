@@ -20,6 +20,9 @@
 
     <article class="article">
         <section id="seccion-1">
+            <div id="btn-play">
+                <img class="img-play" src="/img/boton-de-play.png" alt="boton play">
+            </div>
             <div class="dibujo">
                 <img src="/img/feliz.png" alt="imagen dibujo">
             </div>
@@ -58,8 +61,8 @@
                     <h3>Te espero en:</h3>
                     <img src="" alt="">
                     <p>Fecha: 28 de Mayo de 2023</p>
-                    <p>Hora: 17 horas</p>
-                    <p>Lugar: direccion 1111 - Pilcaniyeu</p>
+                    <p>Hora: 16 horas</p>
+                    <p>Lugar:  Salón Municipal - Pilcaniyeu</p>
                 </div>
                 <div class="dibujo-1">
                     <img src="/img/sp-2.png" alt="imagen dibujo">
@@ -116,6 +119,7 @@
             .then(response => {
                 form.reset(),  
                 alert('Gracias por confirmar!!');
+
             })
             .catch(error => console.error('Error!', error.message))
         })
