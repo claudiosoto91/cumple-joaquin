@@ -12,7 +12,10 @@ html{
 
 /* Boton play audio */
 #btn-play{
-    position: relative;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 2;
     margin-left: .5rem;
     cursor: pointer;
 }
@@ -122,10 +125,6 @@ html{
     margin: 0 auto;
     background-color: rgba(245, 245, 220, 0.669);
     border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 .central h1,h2{
     font-family: 'Pacifico', cursive;
