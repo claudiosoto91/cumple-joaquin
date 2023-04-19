@@ -12,12 +12,15 @@ html{
 
 .blanco{
     color: white;
+    font-size: 24px;
+    margin-right: 10px;
+    font-family: 'Pacifico', cursive;
 }
 
 /* Boton play audio */
 #btn-play{
     position: absolute;
-    top: 30%;
+    bottom: 30%;
     right: 0;
     z-index: 2;
     margin-right: .5rem;
@@ -125,7 +128,7 @@ html{
     color: #023047;
     padding: 10px 0;
     position: relative;
-    top: -200px;
+    top: -150px;
     margin: 0 auto;
     background-color: rgba(245, 245, 220, 0.669);
     border-radius: 20px;
